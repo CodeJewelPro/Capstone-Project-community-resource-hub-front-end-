@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';  
 import Footer from './components/Footer'; 
 import CategoryFilter from './components/CategoryFilter';
+import ResourcesList from './components/ResourcesList';
 
 const App = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
