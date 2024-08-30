@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {getResources} from '../services/resourceService'
 
 const ResourcesList = () => {
     const [resources, setResources] = useState([]);
@@ -16,7 +17,9 @@ const ResourcesList = () => {
             <h2>Available Resources</h2>
             <ul>
                 {resources.map(resource => (
-                    <li key={resource.id}>{resource.name} - {resource.category}</li>
+                    <li key={resource._id}>
+                        <strong>{resource.name}</strong> - {resource.category}
+                        </li>
                 ))}
             </ul>
         </div>

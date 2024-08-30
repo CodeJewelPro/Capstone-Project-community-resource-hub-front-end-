@@ -2,14 +2,22 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import '../components/Navbar.css'; 
 const Navbar = () => {
-    return(
+    return (
         <nav className="navbar">
-            <h1>Community Resource Hub</h1>
-             <ul className="nav-links">
-                <li><Link to ="/">Home</Link></li>
-                <li><Link to = "/categories">Categories</Link></li>
-                <li><Link to = "/profile">My Profile</Link></li>
-             </ul>
+            <div className="navbar-container">
+                <h1 className="navbar-logo">Community Resource Hub</h1>
+                <ul className="navbar-menu">
+                    <li className="navbar-item">
+                        <Link to="/" className="navbar-link">Home</Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link to="/categories" className="navbar-link">Categories</Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link to="/profile" className="navbar-link">My Profile</Link>
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
 };
