@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Community Resource Hub
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Community Resource Hub is a web application designed to connect individuals and families with essential community resources such as food banks, clothing donations, educational programs, and more. The platform allows users to browse, search, and filter resources, create and update their profiles, save resources of interest, and manage those resources in their profiles.
 
-## Available Scripts
+## Features
+User Authentication: Sign up and sign in functionality with profile management.
+Resource Management: Users can browse, filter, search, create, update, and delete resources.
+Profile Management: Users can update their profile details and manage their saved resources.
+Responsive Design: The application is fully responsive and works on various devices.
 
-In the project directory, you can run:
+## Technologies Used
+**Frontend**:
+React
+React Router DOM
+Axios
+CSS (custom styles)
 
-### `npm start`
+**Backend**:
+Node.js
+Express.js
+MongoDB (using Mongoose)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+API:
+RESTful API developed with Express.js
 
-### `npm test`
+## Usage
+Home Page: Start by exploring available resources or create a user account to save and manage resources.
+Sign Up/Sign In: Create a new account or sign in with existing credentials to manage your profile and resources.
+Profile Management: Update your profile information and view or delete saved resources.
+Resources: Browse, search, and filter resources. You can also suggest new resources if you don’t find what you’re looking for.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API Endpoints
+User Routes:
 
-### `npm run build`
+POST /api/users - Create a new user
+POST /api/users/login - Authenticate a user
+GET /api/users/:id - Get user details
+PUT /api/users/:id - Update user details
+DELETE /api/users/:id - Delete a user
+Resource Routes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+POST /api/resources - Create a new resource
+GET /api/resources - Get all resources
+GET /api/resources/:id - Get a single resource by ID
+PUT /api/resources/:id - Update a resource by ID
+DELETE /api/resources/:id - Delete a resource by ID
+Category Routes:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+POST /api/categories - Create a new category
+GET /api/categories - Get all categories
+GET /api/categories/:id - Get a single category by ID
+PUT /api/categories/:id - Update a category by ID
+DELETE /api/categories/:id - Delete a category by ID
