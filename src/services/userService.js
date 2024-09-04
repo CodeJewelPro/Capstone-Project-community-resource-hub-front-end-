@@ -2,12 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:5000/api/users';
 
-// Fetch all users
-const getUsers = () => {
-    return axios.get(API_URL);
-};
-
-// Fetch a single user by ID
+// Fetch a single user by ID 
 const getUserById = (id) => {
     return axios.get(`${API_URL}/${id}`);
 };
@@ -17,14 +12,19 @@ const createUser = (userData) => {
     return axios.post(API_URL, userData);
 };
 
-// Update a user by ID
-const updateUser = (id, userData) => {
+// Sign in user
+const signInUser = (credentials) => {
+    return axios.post(`${API_URL}/login`, credentials);
+};
+
+//Update a User by ID
+const updateUser =(id, userData) => {
     return axios.put(`${API_URL}/${id}`, userData);
 };
 
-// Delete a user by ID
-const deleteUser = (id) => {
+const deleteUser  = (id) => {
     return axios.delete(`${API_URL}/${id}`);
 };
 
-export { getUsers, getUserById, createUser, updateUser, deleteUser };
+export { getUserById, createUser, signInUser, updateUser, deleteUser};
+

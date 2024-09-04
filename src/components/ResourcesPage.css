@@ -1,0 +1,195 @@
+.resources-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.resources-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.resources-container p {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filter-section input,
+.filter-section select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.filter-section input {
+    width: 60%;
+}
+
+.filter-section select {
+    width: 30%;
+}
+
+/* Featured Section */
+.featured-section {
+    margin-bottom: 40px;
+}
+
+.featured-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.featured-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-cards .card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.featured-cards .card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.featured-cards .card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.featured-cards .card a {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.featured-cards .card a:hover {
+    background-color: #0056b3;
+}
+
+/* Resources List Section */
+.resource-list {
+    margin-bottom: 40px;
+}
+
+.resource-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.resource-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.resource-item p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.resource-item a {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.resource-item a:hover {
+    background-color: #218838;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cta-section button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.cta-section button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
+    }
+
+    .filter-section input,
+    .filter-section select {
+        width: 100%;
+    }
+
+    .featured-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .featured-cards .card {
+        width: 100%;
+    }
+
+    .resource-item {
+        padding: 15px;
+    }
+}

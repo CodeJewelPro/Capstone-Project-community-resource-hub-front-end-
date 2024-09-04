@@ -2,29 +2,40 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';  
 import Footer from './components/Footer'; 
-import CategoriesList from './components/CategoriesList'; 
-import ResourcesPage from './components/ResourcesPage';  
 import HomePage from './components/HomePage';
+import CategoriesList from './components/CategoriesList'; 
+import ResourcesPage from './components/ResourcesPage'; 
 import MyProfile from './components/MyProfile';
+import SignIn from './components/SignIn'; 
+import SignUp from './components/SignUp';
+import '../src/styles.css';
 
 const App = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null); 
 
-    const categories = ['Food', 'Clothing', 'Education'];
+    const handleSignIn = (user) => {
+        setUser(user);
+        localStorage.setItem('user', JSON.stringify(user)); 
+    };
 
-    const handleFilter = (category) => {
-        setSelectedCategory(category);
+    const handleLogout = () => {
+        setUser(null);
+        localStorage.removeItem('user'); 
+        window.location.href = '/signin'; 
     };
 
     return (
         <Router>
-            <Navbar />
+            <Navbar user={user} onLogout={handleLogout} />
             <div className="container"> 
                 <Routes>
-                    <Route path="/" element={<HomePage />} />  {/* Home Page */}
-                    <Route path="/categories" element={<CategoriesList />} />  {/* Categories Page */}
-                    <Route path="/profile" element={<MyProfile />} />  {/* My Profile Page */}
-                    <Route path="/resources" element={<ResourcesPage />} />  {/* Resources Page */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/categories" element={<CategoriesList />} />
+                    <Route path="/resources" element={<ResourcesPage />} />
+                    <Route path="/profile" element={<MyProfile userId={user?._id} onLogout={handleLogout} />} />
+                    <Route path="/signin" element={<SignIn onSignIn={handleSignIn} />} /> 
+                    <Route path="/signup" element={<SignUp onSignIn={handleSignIn} />} /> 
+                   
                 </Routes>
             </div>
             <Footer />  
